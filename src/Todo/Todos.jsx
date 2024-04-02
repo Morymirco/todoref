@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 
 const Todos = () => {
    
-    const [tasks,setTasks]=useState(["mory"])
+    const [tasks,setTasks]=useState([])
     const [task,setTask]=useState('')
     const [ajout,setajout]=useState(false);
     // charger les taches dans le localstorage lors du montage du composant
     useEffect(()=>{
-        const savedTasks = JSON.parse(localStorage.getItem("tasks"))
-        if(savedTasks.length !==0){
-            setTasks(savedTasks)
+        const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+        if (savedTasks) { // Check for null
+          setTasks(savedTasks);
         }
     },[])
 
