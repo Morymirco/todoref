@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Todos = () => {
    
-    const [tasks,setTasks]=useState([])
+    const [tasks,setTasks]=useState(["mory"])
     const [task,setTask]=useState('')
     const [ajout,setajout]=useState(false);
     // charger les taches dans le localstorage lors du montage du composant
